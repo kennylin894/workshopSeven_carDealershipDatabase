@@ -27,4 +27,21 @@ CREATE TABLE vehicles (
     PRIMARY KEY (VIN)
 );
 
+-- Table 3: inventory
+CREATE TABLE inventory (
+    dealership_id INT NOT NULL,
+    VIN VARCHAR(17) NOT NULL
+);
+
+-- Table 4: sales_contracts
+CREATE TABLE sales_contracts (
+    id INT NOT NULL AUTO_INCREMENT,
+    VIN VARCHAR(17) NOT NULL,
+    sale_date DATE NOT NULL,
+    sale_price DECIMAL(10, 2) NOT NULL,
+    customer_name VARCHAR(100) NOT NULL,
+    customer_email VARCHAR(100),
+    PRIMARY KEY (id)
+);
+
 
